@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mapsmith"
+version = "0.1.0"
+description = "A lightweight, headless, resume-first Google Maps scraper with menu-tab capture — CLI + library."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Md. Yaleed Haque", email = "yaleedhaque@users.noreply.github.com" }]
+keywords = ["google-maps", "scraper", "playwright", "leads", "places", "osm", "poi"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Internet :: WWW/HTTP",
+  "Topic :: Software Development :: Libraries",
+]
+dependencies = ["playwright>=1.40"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "ruff>=0.5"]
+
+[project.scripts]
+mapsmith = "mapsmith.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/yaleedhaque/mapsmith"
+Issues = "https://github.com/yaleedhaque/mapsmith/issues"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+mapsmith = ["extractors/*.js"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"

@@ -1,0 +1,17 @@
+{
+  "out_dir": "data/raw",
+  "headless": true,
+  "browser": "chromium",
+  "block_images": true,
+  "concurrency": 1,
+  "per_query_delay": 2.0,
+  "per_place_delay": 2.2,
+  "jitter": 0.8,
+  "timeout_ms": 45000,
+  "max_reviews": 60,
+  "locale": "en-US",
+  "categories": [
+    "restaurants", "cafes", "coffee shop", "fast food", "tea stall", "bakery",
+    "sweet shop", "biryani", "Chinese restaurant", "juice bar", "street food"
+  ]
+}

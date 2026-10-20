@@ -1,0 +1,29 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Virtualenvs
+.venv/
+venv/
+
+# Scraper output + local state (never commit scraped data)
+data/
+out/
+*.sqlite
+*.db
+*.ndjson
+
+# Playwright
+.playwright/
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+
+# pytest
+.pytest_cache/
